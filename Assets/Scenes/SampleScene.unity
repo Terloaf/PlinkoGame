@@ -1632,7 +1632,7 @@ MonoBehaviour:
   aimPoint: {fileID: 142700236}
   delay: 0.5
   timeBetweenBalls: 0.5
-  shootPower: 1
+  shootPower: 10
 --- !u!114 &1601958940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1990,7 +1990,7 @@ Transform:
   m_GameObject: {fileID: 1879876043}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.70710677, w: 0.7071068}
-  m_LocalPosition: {x: 9.845099, y: 5.5300007, z: 0}
+  m_LocalPosition: {x: 9.62, y: 5.5, z: 0}
   m_LocalScale: {x: 22.349106, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2226,7 +2226,7 @@ Transform:
   m_GameObject: {fileID: 1932255246}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.70710677, w: 0.7071068}
-  m_LocalPosition: {x: -9.654901, y: 7.0299997, z: 0}
+  m_LocalPosition: {x: -9.53, y: 5.51, z: 0}
   m_LocalScale: {x: 22.349106, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
