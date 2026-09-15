@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -8454345343540508006}
   m_Layer: 0
   m_Name: Ball
-  m_TagString: Untagged
+  m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106,6 +106,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c8b0cfc68a83b9429b0ba7de091b71f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  bouncePower: 10
+  bounceAngle: 45
 --- !u!50 &7726912885764592487
 Rigidbody2D:
   serializedVersion: 5
@@ -122,7 +124,7 @@ Rigidbody2D:
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: af14d88c0a7dc4f42895fb4071f968fc, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0

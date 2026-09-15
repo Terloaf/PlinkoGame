@@ -2,15 +2,20 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public float bouncePower = 5f;
+    public float bounceAngle = 45f;
 
-    // Update is called once per frame
-    void Update()
+    Vector2 velocity;
+
+    private void Update()
     {
+        velocity = gameObject.GetComponent<Rigidbody2D>().linearVelocity;
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Destroy(collision.gameObject);
         
+ 
+       
     }
 }
