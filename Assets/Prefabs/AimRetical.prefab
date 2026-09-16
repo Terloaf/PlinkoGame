@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 1839570198125668726}
   - component: {fileID: 7726912885764592487}
   - component: {fileID: -8454345343540508006}
-  m_Layer: 0
-  m_Name: Ball
-  m_TagString: Ball
+  m_Layer: 6
+  m_Name: AimRetical
+  m_TagString: AimLine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.06132078, b: 0.06132078, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -108,7 +108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   bouncePower: 10
   bounceAngle: 45
-  lifespan: 0
+  lifespan: 0.5
 --- !u!50 &7726912885764592487
 Rigidbody2D:
   serializedVersion: 5
@@ -131,7 +131,7 @@ Rigidbody2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
