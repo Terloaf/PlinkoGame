@@ -9,6 +9,7 @@ public class Ball : MonoBehaviour
     public float lifespan = 0;
     Vector2 velocity;
 
+    public BallSpawner spawner;
     private void Update()
     {
         timeAlive += Time.deltaTime;
@@ -17,6 +18,13 @@ public class Ball : MonoBehaviour
         if (this.gameObject.CompareTag("AimLine") && timeAlive >= 1f)
         {
             Destroy(gameObject);
+        }
+        else if(spawner.isAlive == true && gameObject.CompareTag("AimLine"))
+        {
+            Destroy(gameObject);
+        }
+        {
+            
         }
     }
 

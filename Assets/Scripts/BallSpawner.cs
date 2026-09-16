@@ -11,11 +11,15 @@ public class BallSpawner : MonoBehaviour
     public GameObject aimPoint;
     private Camera mainCam;
 
+    
     public float ballDelay = 0.5f;
     public float aimDelay = 0f;
     private float zRotation;
     public float timeBetweenBalls = 0.5f;
     public float timeBetweenAimLine = 0.5f;
+
+    public bool isAlive;
+
     Rigidbody2D rb;
 
     Vector2 shootLine;
@@ -55,12 +59,11 @@ public class BallSpawner : MonoBehaviour
         {
             ballDelay = timeBetweenBalls;
             SpawnBall();
-
-
+            isAlive = true;
 
 
         }
-        else if (aimDelay <= 0)
+        else if (aimDelay <= 0 && isAlive == false)
         {
             aimDelay = timeBetweenAimLine;
             AimLine();
