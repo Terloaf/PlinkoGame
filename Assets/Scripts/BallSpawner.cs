@@ -26,7 +26,7 @@ public class BallSpawner : MonoBehaviour
     public float shootPower = 1;
     Vector3 mousePos;
 
-
+    public int ballCount;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -80,6 +80,8 @@ public class BallSpawner : MonoBehaviour
         Transform ball = Instantiate(ballPrefab, transform.position, transform.rotation);
 
         ball.GetComponent<Rigidbody2D>().AddForce(shootLine * shootPower, ForceMode2D.Impulse);
+
+        ballCount += 1;
     }
 
     void AimLine()

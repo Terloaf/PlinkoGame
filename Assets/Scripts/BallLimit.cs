@@ -1,3 +1,4 @@
+using NUnit.Framework;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
@@ -5,10 +6,30 @@ public class BallLimit : MonoBehaviour
 {
     public BallSpawner ballSpawner;
 
-    private void Start()
+ 
+    public int limit;
+    public int shotsFired;
+
+    public bool LoseState = false;
+
+    private void Update()
     {
-        ballSpawner.GetComponent<BallSpawner>();
+        shotsFired = ballSpawner.ballCount;
+        CheckLimit();
+
+
+
     }
+
+    private void CheckLimit()
+    {
+        if(shotsFired >= limit)
+        {
+            ballSpawner.enabled = false;
+            LoseState = true;
+        }
+    }
+
 }
 
 

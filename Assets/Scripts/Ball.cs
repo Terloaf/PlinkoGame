@@ -9,9 +9,10 @@ public class Ball : MonoBehaviour
     public float lifespan = 0;
     Vector2 velocity;
 
-    public BallSpawner spawner;
+    BallSpawner spawner;
     private void Update()
     {
+        spawner = FindObjectOfType<BallSpawner>();
         timeAlive += Time.deltaTime;
         velocity = gameObject.GetComponent<Rigidbody2D>().linearVelocity;
 
@@ -22,9 +23,6 @@ public class Ball : MonoBehaviour
         else if(spawner.isAlive == true && gameObject.CompareTag("AimLine"))
         {
             Destroy(gameObject);
-        }
-        {
-            
         }
     }
 
