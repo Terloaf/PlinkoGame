@@ -2711,7 +2711,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BallLimit
   ballSpawner: {fileID: 1601958939}
-  limit: 8
+  limit: 20
   shotsFired: 0
   LoseState: 0
 --- !u!4 &1685134343 stripped
