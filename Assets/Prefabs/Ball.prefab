@@ -84,7 +84,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 7120100414886231561, guid: 64b74bfd32f7cc4478075d6afd5ad7f5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -109,6 +109,7 @@ MonoBehaviour:
   bouncePower: 10
   bounceAngle: 45
   lifespan: 0
+  spawner: {fileID: 0}
 --- !u!50 &7726912885764592487
 Rigidbody2D:
   serializedVersion: 5
