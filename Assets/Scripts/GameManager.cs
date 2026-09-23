@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
 
     public UiManager uiManager;
 
+    public LevelManager levelManager;
+
     DestroyPeg[] pegs;
 
 
