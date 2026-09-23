@@ -40,6 +40,7 @@ public class GameManager : MonoBehaviour
         if(pegs.Count() <= 0)
         {
             uiManager.ActivateWinCanvas();
+            levelManager.LoadNextLevel();
         }
         
 
