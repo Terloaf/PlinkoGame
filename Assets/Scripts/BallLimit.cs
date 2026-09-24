@@ -26,7 +26,7 @@ public class BallLimit : MonoBehaviour
         if(shotsFired >= limit)
         {
             ballSpawner.enabled = false;
-            LoseState = true;
+            
         }
     }
 

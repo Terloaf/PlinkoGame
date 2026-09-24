@@ -10,11 +10,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private Canvas loseCanvas;
 
 
-    private void Awake()
-    {
-        winCanvas = GameObject.FindWithTag("WinCanvas").GetComponent<Canvas>();
-        loseCanvas = GameObject.FindWithTag("LoseCanvas").GetComponent<Canvas>();
-    }
+
     public void LoadNextLevel()
     {
         currentLevel = SceneManager.GetActiveScene().buildIndex;
@@ -28,6 +24,10 @@ public class LevelManager : MonoBehaviour
             if(winCanvas != null)
             {
                 winCanvas.enabled = false;
+            }
+            else
+            {
+                return;
             }
             
         }
@@ -49,12 +49,17 @@ public class LevelManager : MonoBehaviour
     {
         currentLevel = SceneManager.GetActiveScene().buildIndex;
 
-        nextLevel = currentLevel + level;
-        if (nextLevel < SceneManager.sceneCountInBuildSettings)
+        nextLevel = level;
+       
+        
+        SceneManager.LoadScene(nextLevel);
+        if (winCanvas && loseCanvas != null)
         {
-            SceneManager.LoadScene(nextLevel);
             winCanvas.enabled = false;
             loseCanvas.enabled = false;
         }
+        else return;
+        
+        
     }
 }

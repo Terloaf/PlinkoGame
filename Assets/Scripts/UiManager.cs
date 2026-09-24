@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class UiManager : MonoBehaviour
@@ -7,12 +8,23 @@ public class UiManager : MonoBehaviour
     [SerializeField] private Canvas levelSelect;
     [SerializeField] private Canvas mainMenu;
 
+    public TextMeshProUGUI timer;
+    public TextMeshProUGUI shotsLeft;
+
     private void Awake()
     {
-        
-        winCanvas.enabled = false;
-        loseCanvas.enabled = false;
-        
+        if(winCanvas && loseCanvas != null)
+        {
+            winCanvas.enabled = false;
+            loseCanvas.enabled = false;
+            timer.enabled = false;
+        }
+        else
+        {
+            return;
+        }
+
+            
 
     }
 
@@ -36,5 +48,21 @@ public class UiManager : MonoBehaviour
     {
         levelSelect.enabled = true;
         mainMenu.enabled = false;
+    }
+
+    public void ActivateMainMenu()
+    {
+        levelSelect.enabled = false;
+        mainMenu.enabled = true;
+    }
+
+    public void ShowShotsLeft(int ballLimit)
+    {
+        shotsLeft.text = "Shots Left: " + ballLimit.ToString();
+    }
+
+    public void CloseGame()
+    {
+        Application.Quit();
     }
 }

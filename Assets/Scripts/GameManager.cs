@@ -14,6 +14,9 @@ public class GameManager : MonoBehaviour
 
     public LevelManager levelManager;
 
+    [SerializeField]
+    private float lastSecondTimer = 5f;
+
     DestroyPeg[] pegs;
 
 
@@ -23,14 +26,27 @@ public class GameManager : MonoBehaviour
         LoseLevel();
         WinLevel();
         Debug.Log(pegs.Count());
-
+        uiManager.ShowShotsLeft(ballLimit.limit - ballLimit.shotsFired);
         
     }
     private void LoseLevel()
     {
-        if (ballSpawner.enabled == false && ballLimit.LoseState == true)
+        if (ballSpawner.enabled == false && pegs.Count() > 0)
         {
-            uiManager.ActivateLoseCanvas();
+            lastSecondTimer -= Time.deltaTime;
+            uiManager.timer.enabled = true;
+            uiManager.timer.text = lastSecondTimer.ToString("F1");
+
+            if(lastSecondTimer <= 0)
+            {
+                uiManager.ActivateLoseCanvas();
+                uiManager.timer.enabled = false;
+            }
+            else
+            {
+                return;
+            }
+            
             
         }
     }
@@ -47,4 +63,6 @@ public class GameManager : MonoBehaviour
         
 
     }
+
+    
 }
