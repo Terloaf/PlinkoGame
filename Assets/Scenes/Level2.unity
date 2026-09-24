@@ -267,6 +267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d1a0905e419cd64d9b533fb5e56a365, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelManager
+  winCanvas: {fileID: 1750021920}
 --- !u!4 &43245186
 Transform:
   m_ObjectHideFlags: 0
@@ -4727,7 +4728,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BallLimit
   ballSpawner: {fileID: 1601958939}
-  limit: 8
+  limit: 10
   shotsFired: 0
   LoseState: 0
 --- !u!1001 &1672163483
@@ -6098,7 +6099,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   LoseCanvas: {fileID: 559930523}
-  WinCanvas: {fileID: 0}
+  WinCanvas: {fileID: 1750021920}
 --- !u!4 &2082304917
 Transform:
   m_ObjectHideFlags: 0

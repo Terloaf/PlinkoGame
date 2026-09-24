@@ -6,7 +6,7 @@ public class LevelManager : MonoBehaviour
 {
     private int currentLevel;
     private int nextLevel;
-
+    public Canvas winCanvas;
 
     public void LoadNextLevel()
     {
@@ -17,6 +17,7 @@ public class LevelManager : MonoBehaviour
         if(nextLevel < SceneManager.sceneCountInBuildSettings)
         {
             SceneManager.LoadScene(nextLevel);
+            winCanvas.enabled = false;
         }
         else
         {

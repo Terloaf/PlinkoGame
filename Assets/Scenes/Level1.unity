@@ -1959,6 +1959,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d1a0905e419cd64d9b533fb5e56a365, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelManager
+  winCanvas: {fileID: 0}
 --- !u!4 &1093136466
 Transform:
   m_ObjectHideFlags: 0
@@ -2739,7 +2740,7 @@ MonoBehaviour:
   ballLimit: {fileID: 1633746406}
   ballSpawner: {fileID: 1601958939}
   uiManager: {fileID: 2082304916}
-  levelManager: {fileID: 0}
+  levelManager: {fileID: 1093136465}
 --- !u!4 &1633746405
 Transform:
   m_ObjectHideFlags: 0
