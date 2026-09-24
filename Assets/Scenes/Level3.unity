@@ -877,7 +877,7 @@ GameObject:
   - component: {fileID: 443052231}
   m_Layer: 5
   m_Name: WinCanvas
-  m_TagString: Untagged
+  m_TagString: WinCanvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1341,7 +1341,7 @@ GameObject:
   - component: {fileID: 559930525}
   m_Layer: 5
   m_Name: LoseCanvas
-  m_TagString: Untagged
+  m_TagString: LoseCanvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3875,8 +3875,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4734ce9a3f5b53d4d8cb4d07dc309478, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  LoseCanvas: {fileID: 559930523}
-  WinCanvas: {fileID: 443052235}
+  loseCanvas: {fileID: 559930523}
+  winCanvas: {fileID: 443052235}
 --- !u!4 &2082304917
 Transform:
   m_ObjectHideFlags: 0
@@ -4225,6 +4225,6 @@ SceneRoots:
   - {fileID: 1932255251}
   - {fileID: 734818497}
   - {fileID: 338255659}
-  - {fileID: 559930524}
   - {fileID: 2092076998}
   - {fileID: 443052236}
+  - {fileID: 559930524}

@@ -8,6 +8,9 @@ TagManager:
   - AimLine
   - Bumper
   - WinCanvas
+  - MainMenu
+  - LevelSelect
+  - LoseCanvas
   layers:
   - Default
   - TransparentFX

@@ -2,21 +2,39 @@ using UnityEngine;
 
 public class UiManager : MonoBehaviour
 {
-    public Canvas LoseCanvas;
-    public Canvas WinCanvas;
+    public Canvas loseCanvas;
+    public Canvas winCanvas;
+    [SerializeField] private Canvas levelSelect;
+    [SerializeField] private Canvas mainMenu;
 
     private void Awake()
     {
-        LoseCanvas.enabled = false;
-        WinCanvas.enabled = false;
+        
+        winCanvas.enabled = false;
+        loseCanvas.enabled = false;
+        
+
+    }
+
+    private void Start()
+    {
+        levelSelect = GameObject.FindWithTag("LevelSelect").GetComponent<Canvas>();
+        mainMenu = GameObject.FindWithTag("MainMenu").GetComponent<Canvas>();
+        levelSelect.enabled = false;
     }
 
     public void ActivateLoseCanvas()
     {
-        LoseCanvas.enabled = true;
+        loseCanvas.enabled = true;
     }
     public void ActivateWinCanvas()
     {
-        WinCanvas.enabled = true;
+        winCanvas.enabled = true;
+    }
+
+    public void ActivateLevelSelectCanvas()
+    {
+        levelSelect.enabled = true;
+        mainMenu.enabled = false;
     }
 }
