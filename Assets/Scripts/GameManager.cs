@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
         if (ballSpawner.enabled == false && ballLimit.LoseState == true)
         {
             uiManager.ActivateLoseCanvas();
-            Time.timeScale = 0;
+            
         }
     }
 
@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
         if(pegs.Count() <= 0)
         {
             uiManager.ActivateWinCanvas();
-            Time.timeScale = 0;
+            ballSpawner.enabled = false;
         }
         
 

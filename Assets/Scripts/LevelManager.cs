@@ -6,10 +6,11 @@ public class LevelManager : MonoBehaviour
 {
     private int currentLevel;
     private int nextLevel;
-    public Canvas winCanvas;
+    private Canvas winCanvas;
 
     public void LoadNextLevel()
     {
+        winCanvas = GameObject.FindWithTag("WinCanvas").GetComponent<Canvas>();
         currentLevel = SceneManager.GetActiveScene().buildIndex;
 
         nextLevel = currentLevel + 1;
@@ -23,5 +24,13 @@ public class LevelManager : MonoBehaviour
         {
             SceneManager.LoadScene(0);
         }
+    }
+
+
+    public void ReloadLevel()
+    {
+        currentLevel = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentLevel);
+        
     }
 }

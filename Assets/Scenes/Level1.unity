@@ -630,7 +630,7 @@ GameObject:
   - component: {fileID: 364098700}
   m_Layer: 5
   m_Name: WinCanvas
-  m_TagString: Untagged
+  m_TagString: WinCanvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -697,7 +697,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 364098699}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
@@ -1167,7 +1167,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &559930521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1959,7 +1959,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d1a0905e419cd64d9b533fb5e56a365, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelManager
-  winCanvas: {fileID: 0}
 --- !u!4 &1093136466
 Transform:
   m_ObjectHideFlags: 0
@@ -2769,7 +2768,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BallLimit
   ballSpawner: {fileID: 1601958939}
-  limit: 20
+  limit: 10
   shotsFired: 0
   LoseState: 0
 --- !u!4 &1685134343 stripped
@@ -3624,7 +3623,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2099584001}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1093136465}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: ReloadLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2099584001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3745,7 +3756,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2129829970}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1093136465}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: ReloadLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2129829970
 MonoBehaviour:
   m_ObjectHideFlags: 0
