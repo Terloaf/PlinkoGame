@@ -8,9 +8,13 @@ public class LevelManager : MonoBehaviour
     private int nextLevel;
     private Canvas winCanvas;
 
-    public void LoadNextLevel()
+
+    private void Awake()
     {
         winCanvas = GameObject.FindWithTag("WinCanvas").GetComponent<Canvas>();
+    }
+    public void LoadNextLevel()
+    {
         currentLevel = SceneManager.GetActiveScene().buildIndex;
 
         nextLevel = currentLevel + 1;
@@ -18,7 +22,12 @@ public class LevelManager : MonoBehaviour
         if(nextLevel < SceneManager.sceneCountInBuildSettings)
         {
             SceneManager.LoadScene(nextLevel);
-            winCanvas.enabled = false;
+
+            if(winCanvas != null)
+            {
+                winCanvas.enabled = false;
+            }
+            
         }
         else
         {
