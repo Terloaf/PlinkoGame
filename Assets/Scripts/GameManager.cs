@@ -14,11 +14,21 @@ public class GameManager : MonoBehaviour
 
     public LevelManager levelManager;
 
-    [SerializeField]
     private float lastSecondTimer = 5f;
 
     DestroyPeg[] pegs;
 
+    public int pegLimit;
+   
+
+    public AudioSource pegHitSource;
+    public AudioClip pegHitSound;
+
+    private void Start()
+    {
+        pegs = FindObjectsOfType<DestroyPeg>();
+        pegLimit = pegs.Count();
+    }
 
     private void Update()
     {
@@ -26,6 +36,7 @@ public class GameManager : MonoBehaviour
         LoseLevel();
         WinLevel();
         Debug.Log(pegs.Count());
+        PegHitCheck();
         uiManager.ShowShotsLeft(ballLimit.limit - ballLimit.shotsFired);
         
     }
@@ -53,9 +64,10 @@ public class GameManager : MonoBehaviour
 
     private void WinLevel()
     {
+
         pegs = FindObjectsOfType<DestroyPeg>();
 
-        if(pegs.Count() <= 0)
+        if (pegs.Count() <= 0)
         {
             uiManager.ActivateWinCanvas();
             ballSpawner.enabled = false;
@@ -64,5 +76,17 @@ public class GameManager : MonoBehaviour
 
     }
 
-    
+    private void PegHitCheck()
+    {
+        if(pegs.Count() < pegLimit)
+        {
+            pegLimit = pegs.Count();
+
+            pegHitSource.pitch = Random.Range(0.9f, 1.2f);
+            pegHitSource.PlayOneShot(pegHitSound);
+        }
+       
+    }
+
+
 }
