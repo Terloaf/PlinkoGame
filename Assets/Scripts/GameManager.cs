@@ -88,5 +88,18 @@ public class GameManager : MonoBehaviour
        
     }
 
+    public void OnPause()
+    {
+        if (uiManager.pauseScreen.isActiveAndEnabled)
+        {
+            uiManager.DeactivatePauseCanvas();
+        }
+        else
+        {
+            uiManager.ActivatePauseCanvas();
+        }
+        
+    }
+
 
 }

@@ -10,6 +10,7 @@ public class BallSpawner : MonoBehaviour
 
     public GameObject aimPoint;
     private Camera mainCam;
+    public UiManager uiManager;
 
     
     public float ballDelay = 0.5f;
@@ -76,6 +77,7 @@ public class BallSpawner : MonoBehaviour
 
     void SpawnBall()
     {
+        if (uiManager.pauseScreen.isActiveAndEnabled) return;
 
         Transform ball = Instantiate(ballPrefab, transform.position, transform.rotation);
 

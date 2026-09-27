@@ -13,6 +13,7 @@ public class LevelManager : MonoBehaviour
 
     public void LoadNextLevel()
     {
+        Time.timeScale = 1;
         currentLevel = SceneManager.GetActiveScene().buildIndex;
 
         nextLevel = currentLevel + 1;
@@ -42,11 +43,13 @@ public class LevelManager : MonoBehaviour
     {
         currentLevel = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentLevel);
+        Time.timeScale = 1;
         
     }
 
     public void LoadLevel(int level)
     {
+        Time.timeScale = 1;
         currentLevel = SceneManager.GetActiveScene().buildIndex;
 
         nextLevel = level;
